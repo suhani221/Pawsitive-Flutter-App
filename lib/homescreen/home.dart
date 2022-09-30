@@ -36,11 +36,6 @@ class _scrollState extends State<scroll> {
               CarouselSlider(
                 options: CarouselOptions(
                   height: 100.0,
-                  autoPlay: false,
-                  autoPlayInterval: Duration(seconds: 3),
-                  autoPlayAnimationDuration: Duration(milliseconds: 800),
-                  autoPlayCurve: Curves.fastOutSlowIn,
-                  pauseAutoPlayOnTouch: true,
                   aspectRatio: 2.0,
                   onPageChanged: (index, reason) {
                     setState(() {
