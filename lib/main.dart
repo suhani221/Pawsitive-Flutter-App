@@ -1,16 +1,19 @@
-
 import 'package:flutter/material.dart';
-import 'package:hackathon/xdi_phone_xx_s11_pro1.dart';
+import 'screens/sign_in.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MaterialApp(
+  home: PlakshaUMS(),
+));
 
-class MyApp extends StatelessWidget {
+class PlakshaUMS extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: XDIPhoneXXS11Pro1(),
+      initialRoute: '/login',
+      routes: {
+        '/login': (context) =>LoginLoading() ,
+      },
     );
   }
 }
