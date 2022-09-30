@@ -36,7 +36,9 @@ class _scrollState extends State<scroll> {
               CarouselSlider(
                 options: CarouselOptions(
                   height: 100.0,
-                  aspectRatio: 2.0,
+                  viewportFraction: 0.27,
+                  aspectRatio: 0.5,
+                  pageSnapping: true,
                   onPageChanged: (index, reason) {
                     setState(() {
                       _currentIndex = index;
@@ -74,9 +76,9 @@ class Item2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-          shape: const CircleBorder(), primary: Colors.red),
+          shape: const CircleBorder(), primary: Colors.white),
       onPressed: () {},
-      child: Image.asset("lib/assets/facebook-fill.png"),
+      child: Icon(Icons.home,color: Colors.black,size: 54,),
     );
   }
 }
@@ -95,7 +97,7 @@ class Item3 extends StatelessWidget {
         alignment: Alignment.center,
         decoration: const BoxDecoration(shape: BoxShape.circle),
         child: const Text(
-          'I am a button',
+          'I ',
           style: TextStyle(fontSize: 24),
         ),
       ),
