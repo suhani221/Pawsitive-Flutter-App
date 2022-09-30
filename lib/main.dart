@@ -1,16 +1,20 @@
 
 import 'package:flutter/material.dart';
-import 'package:hackathon/xdi_phone_xx_s11_pro1.dart';
+import 'CustomShapes/ShapeScreenNameOne.dart';
+import 'Screens/GetStarted.dart';
+import 'Screens/SelectLocation.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: XDIPhoneXXS11Pro1(),
+      home: SelectLocation(),
     );
   }
 }
