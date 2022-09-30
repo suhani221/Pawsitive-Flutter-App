@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon/screens/service_providers.dart';
 import 'screens/sign_in.dart';
+import 'screens/sign_up.dart';
+import 'homescreen/home.dart';
+
 
 void main() => runApp(MaterialApp(
   home: PlakshaUMS(),
@@ -10,9 +14,12 @@ class PlakshaUMS extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/login',
+      initialRoute: '/home',
       routes: {
-        '/login': (context) =>LoginLoading() ,
+        '/login': (context) =>sign_in(),
+        '/signup': (context) =>sign_up(),
+        '/provider': (context) =>provider(),
+        '/home': (context) =>scroll(),
       },
     );
   }

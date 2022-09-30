@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-Container NavigationButton(String ButtonName, context, String NavigationRoute) {
+Container NavigationButton(String ButtonName, context, String NavigationRoute,double height,double width) {
   return Container(
-    height: 50,
-    width: 370,
+    height: height,
+    width: width,
     child: ElevatedButton(
         onPressed: () {
           Navigator.pushNamed(context, NavigationRoute);
@@ -18,8 +18,8 @@ Container NavigationButton(String ButtonName, context, String NavigationRoute) {
             backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF3AB9CB)),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(28.0),
-                  side: BorderSide(color: Colors.white)),
+                  borderRadius: BorderRadius.circular(20.0),
+                  side: BorderSide(color: Color(0xFF3AB9CB))),
             ))),
   );
 }

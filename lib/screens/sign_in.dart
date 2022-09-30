@@ -1,9 +1,10 @@
 //code optimisation done
 import 'package:flutter/material.dart';
-import '../../GlobalCustomWidgets/navigation_button.dart';
+import '../../GlobalCustomWidgets/navigationtop_button.dart';
 import '../../GlobalCustomWidgets/custom_textfield.dart';
+import '../GlobalCustomWidgets/navigation_button.dart';
 
-class LoginLoading extends StatelessWidget {
+class sign_in extends StatelessWidget {
   var size, height, width;
 
   @override
@@ -19,25 +20,28 @@ class LoginLoading extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(height: height * 0.15),
-            //plaksha university logo
-            //Center(
-            //  child: Image(
-            //      height: height * 0.15,
-             //     image: AssetImage('')),
-            //),
-            SizedBox(
-              height: height * 0.1,
+            Padding(
+              padding: const EdgeInsets.fromLTRB(76, 6, 10, 6),
+              child: Text('Welcome Back!',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 32,
+                      color: Color(0xFF78849E),
+                  ),
+              ),
             ),
-            CustomTextField('Email Address', false),
+            SizedBox(height: height * 0.035),
+            CustomTextField('  Email Address', false),
             SizedBox(
               height: height * 0.04,
             ),
-            CustomTextField('Password', true),
+            CustomTextField('  Password', true),
             SizedBox(
               height: height * 0.06,
             ),
             Center(
-              child: NavigationButton("CONTINUE", context, "/logging"),
+              child: NavigationButton("CONTINUE", context, "/logging",54,340),
             ),
             SizedBox(
               height: height * 0.08,
@@ -54,12 +58,7 @@ class LoginLoading extends StatelessWidget {
                         height: 50,
                       )),
                 ),
-                Text('or continue with',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 17,
-                        fontFamily: 'Lato',
-                        color: Colors.white38)),
+
                 Expanded(
                   child: new Container(
                       margin: const EdgeInsets.only(left: 10.0, right: 60.0),
@@ -70,13 +69,7 @@ class LoginLoading extends StatelessWidget {
                       )),
                 ),
               ]),
-            ),
-           // Center(
-            //  child: Image(
-             //     height: height * 0.1,
-             //     width: 80,
-            //      image: AssetImage('')),
-           // ),
+            )
           ],
         ),
       ),
