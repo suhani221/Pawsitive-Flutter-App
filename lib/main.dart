@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/screens/service_providers.dart';
+import 'CustomShapes/ShapeTopCircleProvider.dart';
 import 'screens/sign_in.dart';
 import 'screens/sign_up.dart';
 import 'homescreen/home.dart';
@@ -17,16 +18,7 @@ class Hack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/provider',
-      routes: {
-        '/login': (context) =>sign_in(),
-        '/signup': (context) =>sign_up(),
-        '/provider': (context) =>provider(),
-        '/home': (context) =>scroll(),
-        '/get_started': (context) => GetStarted(),
-        '/select_location': (context) => SelectLocation(),
-
-      },
+        home: ShapeTopCircleProvider()
     );
   }
 }
