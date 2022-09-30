@@ -18,7 +18,7 @@ class ShapeScreenNameOne extends StatelessWidget {
 class MyPainter extends CustomPainter {
   @override
 
-  
+
   void paint(Canvas canvas, Size size) {
     Paint paint = Paint();
     Path path = Path();
