@@ -10,8 +10,10 @@ class _scrollState extends State<scroll> {
   int _currentIndex=0;
 
   List cardList=[
-    Item2(),
-    Item3(),
+    ProfileView(),
+    HomeViewNew(),
+    HealthView(),
+    AppointmentView(),
 
   ];
 
@@ -29,10 +31,11 @@ class _scrollState extends State<scroll> {
       width: MediaQuery.of(context).size.width,
       child: CarouselSlider(
         options: CarouselOptions(
-          height: 100.0,
-          viewportFraction: 0.4,
+          height: 80.0,
+          viewportFraction: 0.3,
           aspectRatio: 0.5,
           pageSnapping: true,
+          enableInfiniteScroll: false,
           onPageChanged: (index, reason) {
             setState(() {
               _currentIndex = index;
@@ -60,8 +63,8 @@ class _scrollState extends State<scroll> {
   }
 }
 
-class Item2 extends StatelessWidget {
-  const Item2({ Key? key}) : super(key: key);
+class ProfileView extends StatelessWidget {
+  const ProfileView({ Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -74,8 +77,50 @@ class Item2 extends StatelessWidget {
   }
 }
 
-class Item3 extends StatelessWidget {
-  const Item3({ Key? key}) : super(key: key);
+class HomeViewNew extends StatelessWidget {
+  const HomeViewNew({ Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+          shape: const CircleBorder(), primary: Colors.white),
+      onPressed: () {},
+      child: Icon(Icons.home,color: Colors.black,size: 54,),
+    );
+  }
+}
+
+class HealthView extends StatelessWidget {
+  const HealthView({ Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+          shape: const CircleBorder(), primary: Colors.white),
+      onPressed: () {},
+      child: Icon(Icons.home,color: Colors.black,size: 54,),
+    );
+  }
+}
+
+class AppointmentView extends StatelessWidget {
+  const AppointmentView({ Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+          shape: const CircleBorder(), backgroundColor: Colors.white),
+      onPressed: () {},
+      child: Icon(Icons.home,color: Colors.black,size: 54,),
+    );
+  }
+}
+
+class HomeViewOld extends StatelessWidget {
+  const HomeViewOld({ Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

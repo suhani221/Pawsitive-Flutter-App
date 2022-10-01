@@ -1,11 +1,9 @@
 //code optimisation done
 import 'package:flutter/material.dart';
-import '../../GlobalCustomWidgets/navigation_button.dart';
-import '../../GlobalCustomWidgets/custom_poviders.dart';
-import '../CustomShapes/ShapeTopCircleProvider.dart';
-import '../CustomShapes/ShapeSelectCityOne.dart';
-import '../homescreen/home.dart';
+import '../GlobalCustomWidgets/top_app_bar.dart';
 import '../CustomShapes/ShapeHomeScreenOne.dart';
+import '../CustomShapes/ShapeHomeScreenTop.dart';
+import '../GlobalCustomWidgets/home_screen_card.dart';
 
 class HomeScreen extends StatelessWidget {
   var size, height, width;
@@ -17,30 +15,67 @@ class HomeScreen extends StatelessWidget {
     width = size.width;
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Stack(
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: Column(
           children: [
-          Positioned(
-              child:
-              ShapeHomeScreen(shapeColor: const Color(0xFF52AFFF),)),
-            Positioned(
-                top: 50,
-                left: 0,
-                right: 0,
-                child: scroll()),
-            Positioned(
-              top: 150,
-                left: 0,
-                right: 0,
-                child:
-                ShapeHomeScreen(shapeColor: const Color(0xFF5260FF),)),
-            Positioned(
-                top: 250,
-                left: 0,
-                right: 0,
-                child:
-                ShapeHomeScreen(shapeColor: const Color(0xFFFF52FC),)),
-
-        ]),
+            Stack(
+              clipBehavior: Clip.none, children: [
+              Positioned(
+                  child: ShapeHomeScreenTop()),
+              Positioned(
+                  top: 50,
+                  child: scroll())
+            ],
+            ),
+            Expanded(
+          child: SingleChildScrollView(
+            child: Stack(
+                clipBehavior: Clip.none,
+                children: [
+                Positioned(
+                    child:
+                    Container(
+                      height: 920,
+                    )
+                ),
+                  Positioned(
+                      top: 650,
+                      child:
+                      ShapeHomeScreen(shapeColor: const Color(0xFF18568b),)),
+                  Positioned(
+                      top: 450,
+                      child:
+                      ShapeHomeScreen(shapeColor: const Color(0xFF1c6fb7),)),
+                  Positioned(
+                      top: 250,
+                      child:
+                      Stack(
+                          children: [
+                            ShapeHomeScreen(
+                              shapeColor: const Color(0xFF2a91ea),
+                            ),
+                            Positioned(
+                              top: 150,
+                                left: 50,
+                                child: homeScreenCardDetails('Appointment', context))
+                          ]
+                      ),
+                  ),
+                  Positioned(
+                    top: 0,
+                      child:
+                      ShapeHomeScreen(
+                        shapeColor: const Color(0xFF52AFFF),
+                      ),
+                  ),
+              ]
+            ),
+          ),
+        ),]
+        ),
+      ),
     );
   }
 }
