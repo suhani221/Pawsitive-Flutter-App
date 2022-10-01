@@ -76,3 +76,15 @@ class sign_in extends StatelessWidget {
     );
   }
 }
+class Utils {
+  static Widget circularImageWithBorder(String imgPath, double rad, double borderWidth, Color borderColor) {
+    return CircleAvatar(
+        radius: rad + borderWidth,
+        backgroundColor: borderColor,
+        child: CircleAvatar(
+          backgroundImage: AssetImage(imgPath),
+          radius: rad,
+        ));
+  }
+}
+

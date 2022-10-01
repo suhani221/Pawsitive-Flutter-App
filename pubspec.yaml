@@ -60,6 +60,7 @@ dev_dependencies:
   adobe_xd: ^2.0.1
   flutter_svg: ^1.1.5
   carousel_slider: ^2.2.1
+  flutter_map: ^0.14.0
 
 
 # For information on the generic Dart part of this file, see the
@@ -78,6 +79,10 @@ flutter:
     - lib/assets/cellphone.svg
     - lib/assets/facebook.svg
     - lib/assets/facebook-fill.png
+    - lib/assets/doc.png
+    - lib/assets/pic1.png
+    - lib/assets/pic2.png
+    - lib/assets/pic3.png
 
     - lib/assets/google.svg
 

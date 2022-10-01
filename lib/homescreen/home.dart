@@ -36,7 +36,7 @@ class _scrollState extends State<scroll> {
               CarouselSlider(
                 options: CarouselOptions(
                   height: 100.0,
-                  viewportFraction: 0.27,
+                  viewportFraction: 0.3,
                   aspectRatio: 0.5,
                   pageSnapping: true,
                   onPageChanged: (index, reason) {
@@ -54,7 +54,7 @@ class _scrollState extends State<scroll> {
                           child: Card(
 
                               shape: const CircleBorder(),
-                              color: Colors.blue[100],
+                              color: Colors.white,
                               child: card
                           )
                         );
@@ -96,10 +96,7 @@ class Item3 extends StatelessWidget {
         height: 200,
         alignment: Alignment.center,
         decoration: const BoxDecoration(shape: BoxShape.circle),
-        child: const Text(
-          'I ',
-          style: TextStyle(fontSize: 24),
-        ),
+        child:Icon(Icons.monitor_heart,color: Colors.black,size: 54,)
       ),
       onPressed: () {},
     );
