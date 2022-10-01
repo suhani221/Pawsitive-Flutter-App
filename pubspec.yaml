@@ -83,7 +83,7 @@ flutter:
     - lib/assets/pic1.png
     - lib/assets/pic2.png
     - lib/assets/pic3.png
-
+    - lib/assets/welcomeDog.png
     - lib/assets/google.svg
 
 
