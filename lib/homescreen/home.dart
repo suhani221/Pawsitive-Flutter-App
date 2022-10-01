@@ -43,7 +43,6 @@ class _scrollState extends State<scroll> {
           return Builder(
               builder:(BuildContext context){
                 return Container(
-<<<<<<< HEAD
                   height: MediaQuery.of(context).size.height*0.30,
                   width: MediaQuery.of(context).size.width,
                   child: Card(
@@ -52,16 +51,6 @@ class _scrollState extends State<scroll> {
                       color: Colors.blue[100],
                       child: card
                   )
-=======
-                    height: MediaQuery.of(context).size.height*0.30,
-                    width: MediaQuery.of(context).size.width,
-                    child: Card(
-
-                        shape: const CircleBorder(),
-                        color: Colors.blue[100],
-                        child: card
-                    )
->>>>>>> 12ae8fc539f0e32104e845bce87c0ade5c63bc82
                 );
               }
           );
