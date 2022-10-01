@@ -19,7 +19,6 @@ class provider extends StatelessWidget {
         child: Column(
           children: [
             Stack(
-              clipBehavior: Clip.none,
               alignment: AlignmentDirectional.center,
               children: [
                 Positioned(
