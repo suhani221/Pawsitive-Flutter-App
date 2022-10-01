@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-
 class scroll extends StatefulWidget {
   @override
   _scrollState createState() => _scrollState();
@@ -26,45 +25,37 @@ class _scrollState extends State<scroll> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return  Container(
+      width: MediaQuery.of(context).size.width,
+      child: CarouselSlider(
+        options: CarouselOptions(
+          height: 100.0,
+          viewportFraction: 0.4,
+          aspectRatio: 0.5,
+          pageSnapping: true,
+          onPageChanged: (index, reason) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+        ),
+        items: cardList.map((card){
+          return Builder(
+              builder:(BuildContext context){
+                return Container(
+                    height: MediaQuery.of(context).size.height*0.30,
+                    width: MediaQuery.of(context).size.width,
+                    child: Card(
 
-          body: Column(
-            children: <Widget>[
-              SizedBox(
-                height: 260,
-              ),
-              CarouselSlider(
-                options: CarouselOptions(
-                  height: 100.0,
-                  viewportFraction: 0.3,
-                  aspectRatio: 0.5,
-                  pageSnapping: true,
-                  onPageChanged: (index, reason) {
-                    setState(() {
-                      _currentIndex = index;
-                    });
-                  },
-                ),
-                items: cardList.map((card){
-                  return Builder(
-                      builder:(BuildContext context){
-                        return Container(
-                          height: MediaQuery.of(context).size.height*0.30,
-                          width: MediaQuery.of(context).size.width,
-                          child: Card(
-
-                              shape: const CircleBorder(),
-                              color: Colors.white,
-                              child: card
-                          )
-                        );
-                      }
-                  );
-                }).toList(),
-              ),
-
-            ],
-          )
+                        shape: const CircleBorder(),
+                        color: Colors.blue[100],
+                        child: card
+                    )
+                );
+              }
+          );
+        }).toList(),
+      ),
     );
   }
 }
@@ -96,10 +87,12 @@ class Item3 extends StatelessWidget {
         height: 200,
         alignment: Alignment.center,
         decoration: const BoxDecoration(shape: BoxShape.circle),
-        child:Icon(Icons.monitor_heart,color: Colors.black,size: 54,)
+        child: const Text(
+          'I ',
+          style: TextStyle(fontSize: 24),
+        ),
       ),
       onPressed: () {},
     );
   }
 }
-
