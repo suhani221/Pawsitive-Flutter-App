@@ -3,10 +3,12 @@ import 'package:flutter_svg/svg.dart';
 
 Container CustomField(String ButtonName,String asset) {
   return Container(
-    height: 60,
+    height: 51,
     child: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      padding: const EdgeInsets.symmetric(horizontal: 40.0),
       child: Material(
+        borderRadius: const BorderRadius.all(Radius.circular(25.0)),
+        elevation: 3,
         child:ElevatedButton(
             onPressed: () {
             },
@@ -17,17 +19,19 @@ Container CustomField(String ButtonName,String asset) {
                 shadowColor:  MaterialStateProperty.all<Color>(Colors.white),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
+                      borderRadius: BorderRadius.circular(25.0),
                       side: BorderSide(color: Colors.white)),
                 )),
             child: Row(
-              children: <Widget>[
-                SizedBox(width: 80,),
+                mainAxisAlignment: MainAxisAlignment.center, //Center Row contents horizontally,
+                crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+
                 SvgPicture.asset(asset),
                 Text(
                     ButtonName,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 20, color: Color(0xFF3F4079))
+                    style: TextStyle(fontSize: 16, color: Color(0xFF3F4079))
                 ),
               ],
             )),

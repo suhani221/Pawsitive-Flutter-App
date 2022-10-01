@@ -78,7 +78,7 @@ flutter:
     - lib/assets/cellphone.svg
     - lib/assets/facebook.svg
     - lib/assets/facebook-fill.png
-
+    - lib/assets/welcomeDog.png
     - lib/assets/google.svg
 
 

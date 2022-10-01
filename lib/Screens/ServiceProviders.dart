@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import '../../GlobalCustomWidgets/navigation_button.dart';
 import '../../GlobalCustomWidgets/custom_poviders.dart';
+import '../CustomShapes/ShapeTopCircleProvider.dart';
+import '../CustomShapes/ShapeSelectCityOne.dart';
 
 class provider extends StatelessWidget {
   var size, height, width;
@@ -13,39 +15,46 @@ class provider extends StatelessWidget {
     width = size.width;
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
+      body: Container(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SizedBox(height: height * 0.15),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(126, 6, 10, 6),
-              child: Text('Temp Name',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 32,
-                  color: Colors.black,
+            Stack(
+              clipBehavior: Clip.none,
+              alignment: AlignmentDirectional.center,
+              children: [
+                Positioned(
+                    child: ShapeTopCircleProvider()
                 ),
-              ),
+                const Positioned(
+                  top: 100,
+                  child: Center(
+                    child: Text('Temp Name',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 32,
+                      color: Colors.white,
+                    ),
+                ),
+                  ),)
+              ],
             ),
-            SizedBox(height: height * 0.035),
+
+            SizedBox(height: height * 0.1),
             CustomField('  Mobile Number', "lib/assets/cellphone.svg"),
             SizedBox(
-              height: height * 0.04,
+              height: height * 0.05,
             ),
             CustomField('  Facebook', "lib/assets/facebook.svg"),
             SizedBox(
-              height: height * 0.04,
+              height: height * 0.05,
             ),
             CustomField('  Google', "lib/assets/google.svg"),
             SizedBox(
-              height: height * 0.04,
+              height: height * 0.05,
             ),
-
-            Center(
-              child: Text("By continuing,you agree to Terms & Conditions",
+            const Center(
+              child: Text("By continuing, you agree to Terms & Conditions",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.normal,
