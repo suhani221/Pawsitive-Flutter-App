@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 
 class ShapeTopCircleProvider extends StatelessWidget {
-  const ShapeTopCircleProvider({super.key});
+  var size, height, width;
+  ShapeTopCircleProvider({super.key});
 
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
+    height = size.height;
+    width = size.width;
     return CustomPaint(
-        painter: MyPainter(),
+        painter: MyPainter(width, height),
         child: SizedBox(
             width: MediaQuery.of(context).size.width,
             height: 200
@@ -16,6 +20,9 @@ class ShapeTopCircleProvider extends StatelessWidget {
 }
 
 class MyPainter extends CustomPainter {
+  final double screenWidth;
+  final double screenHeight;
+  MyPainter(this.screenWidth, this.screenHeight);
   @override
   void paint(Canvas canvas, Size size) {
     Paint paint = Paint();
@@ -26,8 +33,8 @@ class MyPainter extends CustomPainter {
 
 
     paint.color = Color(0xff2891ED);
-    final double _xScaling = size.width / 414;
-    final double _yScaling = size.height / 896;
+    final double _xScaling = size.width / screenWidth;
+    final double _yScaling = size.height / screenHeight;
     path.lineTo(0 * _xScaling,218.191 * _yScaling);
     path.cubicTo(0 * _xScaling,218.191 * _yScaling,0 * _xScaling,0 * _yScaling,0 * _xScaling,0 * _yScaling,);
     path.cubicTo(0 * _xScaling,0 * _yScaling,390 * _xScaling,0 * _yScaling,390 * _xScaling,0 * _yScaling,);
