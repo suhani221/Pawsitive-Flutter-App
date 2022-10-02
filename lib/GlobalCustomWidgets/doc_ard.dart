@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../screens/appointment.dart';
 
 class doc_card extends StatefulWidget {
@@ -10,16 +9,17 @@ class doc_card extends StatefulWidget {
 }
 
 class _doc_cardState extends State<doc_card> {
+  get index => null;
+
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.topCenter,
+    return Column(
       children: <Widget>[
         Container(
           width: double.infinity,
-          height: 250,
+          height: 252,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 18,vertical: 6),
             child: Card(
               elevation: 18,
                 shape: RoundedRectangleBorder(
@@ -41,7 +41,9 @@ class _doc_cardState extends State<doc_card> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text("Dr. ABC", style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),),
+                                 Text(
+                                "",
+                                 style: const TextStyle(color:Colors.grey,fontSize: 14,fontFamily: "Lato"),),
                                   SizedBox(height: 20,),
                                   Container(
                                    padding: EdgeInsets.all(12),
@@ -67,9 +69,9 @@ class _doc_cardState extends State<doc_card> {
                               Row(
                                 children: [
                                   Text("CLOSED TODAY", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal,color: Colors.red),),
-                                  SizedBox(width: 45,),
+                                  SizedBox(width: 44,),
                                   Text("9:30AM-08:00PM", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal),),
-                                  SizedBox(width: 45,),
+                                  SizedBox(width: 44,),
 
                                   Container(
                                     height: 55,
@@ -97,4 +99,7 @@ class _doc_cardState extends State<doc_card> {
     );
 
   }
+}
+
+class _foundUsers {
 }

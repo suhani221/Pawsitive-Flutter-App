@@ -25,7 +25,7 @@ class MyPainter extends CustomPainter {
     // Path number 1
 
 
-    paint.color = Color(0xffff52ae);
+    paint.color = Color(0xffFFFFFF);
     path = Path();
     path.lineTo(0, 0);
     path.cubicTo(0, 0, size.width, 0, size.width, 0);
