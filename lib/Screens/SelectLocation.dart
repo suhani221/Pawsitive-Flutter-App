@@ -71,10 +71,20 @@ class _SelectLocationState extends State<SelectLocation> {
                           IconButton(
                             icon: const Icon(Icons.close_rounded, size: 30,),
                             color: Colors.white,
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/login');
+                            },
                           ),
                           const Text('Select your city',
                           style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600)),
+                          SizedBox(width: 120,),
+                          IconButton(
+                            icon: const Icon(Icons.arrow_forward_rounded, size: 30,),
+                            color: Colors.white,
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/home');
+                            },
+                          ),
                         ],
                       ),
                   ),

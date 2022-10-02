@@ -11,7 +11,7 @@ class widgetTesting extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(height: 50,),
-          homeScreenCardDetails('Appointment', context),
+          homeScreenCardDetails('Appointment'),
         ],
       ),
     );

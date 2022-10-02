@@ -44,10 +44,13 @@ class sign_up extends StatelessWidget {
               height: height * 0.06,
             ),
             Center(
-              child: NavigationButton("CONTINUE", context, "/logging",54,340),
+              child: NavigationButton("CONTINUE", context, "/login",54,340),
             ),
             SizedBox(
               height: height * 0.08,
+            ),
+            Center(
+              child: NavigationButton("SIGN UP VIA A DIFFERENT METHOD", context, "/provider",54,340),
             ),
             //continue with and microsoft login
             Center(

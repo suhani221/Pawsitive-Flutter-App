@@ -87,6 +87,10 @@ flutter:
     - lib/assets/message.png
     - lib/assets/welcomeDog.png
     - lib/assets/google.svg
+    - lib/assets/heart.png
+    - lib/assets/home.png
+    - lib/assets/pulse.png
+    - lib/assets/profile.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

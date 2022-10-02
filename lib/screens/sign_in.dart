@@ -41,7 +41,7 @@ class sign_in extends StatelessWidget {
               height: height * 0.06,
             ),
             Center(
-              child: NavigationButton("CONTINUE", context, "/logging",54,340),
+              child: NavigationButton("CONTINUE", context, "/select_location",54,340),
             ),
             SizedBox(
               height: height * 0.08,

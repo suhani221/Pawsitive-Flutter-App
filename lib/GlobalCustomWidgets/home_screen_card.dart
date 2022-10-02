@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Column homeScreenCardDetails(String heading, context) {
+Column homeScreenCardDetails(String heading) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-class scroll extends StatefulWidget {
+class topAppBar extends StatefulWidget {
   @override
-  _scrollState createState() => _scrollState();
+  _topAppBarState createState() => _topAppBarState();
 }
 
-class _scrollState extends State<scroll> {
+class _topAppBarState extends State<topAppBar> {
   int _currentIndex=0;
 
   List cardList=[
@@ -31,7 +31,7 @@ class _scrollState extends State<scroll> {
       width: MediaQuery.of(context).size.width,
       child: CarouselSlider(
         options: CarouselOptions(
-          height: 80.0,
+          height: 70.0,
           viewportFraction: 0.3,
           aspectRatio: 0.5,
           pageSnapping: true,
@@ -49,7 +49,6 @@ class _scrollState extends State<scroll> {
                   height: MediaQuery.of(context).size.height*0.30,
                   width: MediaQuery.of(context).size.width,
                   child: Card(
-
                       shape: const CircleBorder(),
                       color: Colors.blue[100],
                       child: card
@@ -63,30 +62,57 @@ class _scrollState extends State<scroll> {
   }
 }
 
-class ProfileView extends StatelessWidget {
+class ProfileView extends StatefulWidget {
   const ProfileView({ Key? key}) : super(key: key);
 
   @override
+  State<ProfileView> createState() => _ProfileViewState();
+}
+
+class _ProfileViewState extends State<ProfileView> {
+  @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-          shape: const CircleBorder(), primary: Colors.white),
-      onPressed: () {},
-      child: Icon(Icons.home,color: Colors.black,size: 54,),
+    return Container(
+      height: 32,
+      width: 32,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+            shape: const CircleBorder(), backgroundColor: Colors.white),
+        onPressed: () {
+          setState(() {
+
+          });
+        },
+
+        child: Image.asset('lib/assets/profile.png'),
+      ),
     );
   }
 }
 
-class HomeViewNew extends StatelessWidget {
+class HomeViewNew extends StatefulWidget {
   const HomeViewNew({ Key? key}) : super(key: key);
 
+  @override
+  State<HomeViewNew> createState() => _HomeViewNewState();
+}
+
+class _HomeViewNewState extends State<HomeViewNew> {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-          shape: const CircleBorder(), primary: Colors.white),
-      onPressed: () {},
-      child: Icon(Icons.home,color: Colors.black,size: 54,),
+          shape: const CircleBorder(), backgroundColor: Colors.white),
+      onPressed: () {
+        setState(() {
+
+        });
+      },
+
+      child: Container(
+          height: 32,
+          width: 32,
+          child: Image.asset('lib/assets/home.png')),
     );
   }
 }
@@ -98,9 +124,13 @@ class HealthView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-          shape: const CircleBorder(), primary: Colors.white),
-      onPressed: () {},
-      child: Icon(Icons.home,color: Colors.black,size: 54,),
+          shape: const CircleBorder(), backgroundColor: Colors.white),
+      onPressed: () {
+      },
+      child: Container(
+          height: 32,
+          width: 32,
+          child: Image.asset('lib/assets/heart.png')),
     );
   }
 }
@@ -113,8 +143,12 @@ class AppointmentView extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
           shape: const CircleBorder(), backgroundColor: Colors.white),
-      onPressed: () {},
-      child: Icon(Icons.home,color: Colors.black,size: 54,),
+      onPressed: () {
+      },
+      child: Container(
+          height: 50,
+          width: 50,
+          child: Image.asset('lib/assets/pulse.png')),
     );
   }
 }

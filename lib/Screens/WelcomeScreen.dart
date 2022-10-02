@@ -54,7 +54,7 @@ class WelcomeScreen extends StatelessWidget {
                             children: [
                               TextButton(
                               onPressed: (){
-                        Navigator.pushNamed(context, '/provider');
+                        Navigator.pushNamed(context, '/signup');
                         },
                                 child: const Text('CONTINUE',
                                   textAlign: TextAlign.center,
@@ -67,7 +67,7 @@ class WelcomeScreen extends StatelessWidget {
                               ),
                               SizedBox(width: 40,),
                               IconButton(onPressed: (){
-                                Navigator.pushNamed(context, '/provider');
+                                Navigator.pushNamed(context, '/signup');
                               },
                                   icon: const Icon(Icons.arrow_forward_rounded, color: Colors.white,))
                             ],

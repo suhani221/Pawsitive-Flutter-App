@@ -18,6 +18,7 @@ import 'CustomShapes/ShapeWelcomeOne.dart';
 import 'Screens/widgetTesting.dart';
 
 
+
 void main() => runApp(MaterialApp(
   home: Hack(),
 ));
@@ -27,7 +28,7 @@ class Hack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/home',
+      initialRoute: '/welcome',
       routes: {
         '/login': (context) =>sign_in(),
         '/signup': (context) =>sign_up(),

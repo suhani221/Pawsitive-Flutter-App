@@ -29,7 +29,7 @@ class HomeScreenT extends StatelessWidget {
                 top: 50,
                 left: 0,
                 right: 0,
-                child: scroll()),
+                child: topAppBar()),
             Positioned(
                 top: 150,
                 left: 0,

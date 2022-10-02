@@ -26,7 +26,8 @@ class HomeScreen extends StatelessWidget {
                   child: ShapeHomeScreenTop()),
               Positioned(
                   top: 50,
-                  child: scroll())
+                  child: Container(
+                      child: topAppBar()))
             ],
             ),
             Expanded(
@@ -45,9 +46,21 @@ class HomeScreen extends StatelessWidget {
                       child:
                       ShapeHomeScreen(shapeColor: const Color(0xFF18568b),)),
                   Positioned(
-                      top: 450,
-                      child:
-                      ShapeHomeScreen(shapeColor: const Color(0xFF1c6fb7),)),
+                      top: 500,
+                      child:Stack(
+                          children: [
+                            ShapeHomeScreen(
+                              shapeColor: const Color(0xFF1c6fb7),
+                            ),
+                            Positioned(
+                                top: 150,
+                                left: 50,
+                                child: homeScreenCardDetails('Article'))
+                          ]
+                      ),
+
+                  ),
+
                   Positioned(
                       top: 250,
                       child:
@@ -59,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                             Positioned(
                               top: 150,
                                 left: 50,
-                                child: homeScreenCardDetails('Appointment', context))
+                                child: homeScreenCardDetails('Appointment'))
                           ]
                       ),
                   ),

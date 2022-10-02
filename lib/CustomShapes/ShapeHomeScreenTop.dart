@@ -25,7 +25,11 @@ class MyPainter extends CustomPainter {
     // Path number 1
 
 
+<<<<<<< Updated upstream
     paint.color = Color(0xffFFFFFF);
+=======
+    paint.color = Color(0xffffffff);
+>>>>>>> Stashed changes
     path = Path();
     path.lineTo(0, 0);
     path.cubicTo(0, 0, size.width, 0, size.width, 0);
