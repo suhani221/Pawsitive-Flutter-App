@@ -20,7 +20,7 @@ class _cardState extends State<card> {
         Container(
           margin: const EdgeInsets.only(top: 30),
           width: double.infinity,
-          height: 210,
+          height: 220,
           child: Card(
               elevation: 3,
               shape: RoundedRectangleBorder(
@@ -37,9 +37,9 @@ class _cardState extends State<card> {
                         const Text("Dr. ABC", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
                         const SizedBox(height: 10,),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: const [
                             Text("Clinic Fee Rs 500", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal),),
-                            SizedBox(width: 150,),
                             Text("9:00-17:00", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal),),
                           ],
                         ),
