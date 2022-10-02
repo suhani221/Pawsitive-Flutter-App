@@ -15,7 +15,7 @@ class ProfileScreen extends StatelessWidget {
     width = size.width;
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Container(
+      body: SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: Column(
@@ -43,9 +43,9 @@ class ProfileScreen extends StatelessWidget {
                                 shapeColor: const Color(0xFF1c6fb7),
                               ),
                               Positioned(
-                                  top: 150,
+                                  top: 170,
                                   left: 50,
-                                  child: homeScreenCardDetails('Article'))
+                                  child: profileDetails('Timeline', 'Vaccination Status - Completed', 'Last Appointment - 11/09/2022', 'Time - 5:00 PM', context))
                             ]
                         ),
 
@@ -60,20 +60,20 @@ class ProfileScreen extends StatelessWidget {
                                 shapeColor: const Color(0xFF2a91ea),
                               ),
                               Positioned(
-                                  top: 150,
+                                  top: 170,
                                   left: 50,
-                                  child: homeScreenCardDetails('Appointment'))
-                            ]
+                                  child: profileDetails('About Me', 'Breed - Golden Retriever', 'Age - 2.5 Years', 'Weight - 32 Kg', context))]
                         ),
                       ),
                       Positioned(
-                        top: 0,
+                        top: 70,
                         child:
-                        ShapeHomeScreen(
-                          shapeColor: const Color(0xFF52AFFF),
+                        Image.asset(
+                          'lib/assets/profilePicture.png',
+                          width: MediaQuery.of(context).size.width,
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                           top: 0,
                           child: ShapeHomeScreenTop()),
                       Positioned(

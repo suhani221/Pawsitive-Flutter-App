@@ -11,7 +11,7 @@ class GetStarted extends StatelessWidget {
       child: Container(
         child: Column(
           children: [
-            SizedBox(height: 500,),
+            const SizedBox(height: 500,),
             Stack(children: <Widget>[
               Container(
                 alignment: Alignment.centerRight,

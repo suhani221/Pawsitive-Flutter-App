@@ -1,8 +1,5 @@
 //code optimisation done
 import 'package:flutter/material.dart';
-import '../../GlobalCustomWidgets/navigationtop_button.dart';
-import '../../GlobalCustomWidgets/custom_textfield.dart';
-import '../GlobalCustomWidgets/navigation_button.dart';
 import 'appointment.dart';
 
 class test extends StatelessWidget {
@@ -26,21 +23,21 @@ class test extends StatelessWidget {
       alignment: Alignment.topCenter,
       children: <Widget>[
                 Container(
-                      margin: EdgeInsets.only(top: 30),
+                      margin: const EdgeInsets.only(top: 30),
                       width: double.infinity,
                       child: Card(
-                          color: Color(0xffeeeeee),
+                          color: const Color(0xffeeeeee),
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: <Widget>[
                               Padding(
-                                padding: EdgeInsets.only(top: 40, bottom: 0, left: 10, right: 10),
+                                padding: const EdgeInsets.only(top: 40, bottom: 0, left: 10, right: 10),
                                 child: Column(
                                   children: <Widget>[
-                                    Text("Dr. Maseed", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                                    Text("Dr. Maseed is a radiation oncologist in Indianapolis, Indiana and is affiliated with multiple hospitals in the area. He has been in practice for more than 20 years.", style: TextStyle()),
+                                    const Text("Dr. Maseed", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                                    const Text("Dr. Maseed is a radiation oncologist in Indianapolis, Indiana and is affiliated with multiple hospitals in the area. He has been in practice for more than 20 years.", style: TextStyle()),
                                     ButtonBar(children: <Widget>[
-                                      ElevatedButton(child: Text("APPOINTMENT", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),), onPressed: (){},)
+                                      ElevatedButton(child: const Text("APPOINTMENT", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),), onPressed: (){},)
                                     ],)
                                   ],
                                 ),
@@ -57,9 +54,9 @@ class test extends StatelessWidget {
             Center(
               child: Row(children: <Widget>[
                 Expanded(
-                  child: new Container(
+                  child: Container(
                       margin: const EdgeInsets.only(left: 60.0, right: 10.0),
-                      child: Divider(
+                      child: const Divider(
                         thickness: 2.5,
                         color: Colors.white38,
                         height: 50,
@@ -67,9 +64,9 @@ class test extends StatelessWidget {
                 ),
 
                 Expanded(
-                  child: new Container(
+                  child: Container(
                       margin: const EdgeInsets.only(left: 10.0, right: 60.0),
-                      child: Divider(
+                      child: const Divider(
                         thickness: 2.5,
                         color: Colors.white38,
                         height: 50,

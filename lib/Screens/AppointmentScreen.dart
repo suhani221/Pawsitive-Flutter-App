@@ -2,11 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/Screens/choose_doc.dart';
 import '../GlobalCustomWidgets/top_app_bar.dart';
-import '../CustomShapes/ShapeHomeScreenOne.dart';
 import '../CustomShapes/ShapeHomeScreenTop.dart';
-import '../GlobalCustomWidgets/home_screen_card.dart';
-import 'package:flutter/material.dart';
-import '../CustomShapes/ShapeSelectCityOne.dart';
 
 class AppointmentScreen extends StatelessWidget {
   var size, height, width;
@@ -18,14 +14,14 @@ class AppointmentScreen extends StatelessWidget {
     width = size.width;
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Container(
+      body: SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: Column(
           children: [
             Stack(
               clipBehavior: Clip.none, children: [
-              Positioned(
+              const Positioned(
                   child: ShapeHomeScreenTop()),
               Positioned(
                   top: 50,
@@ -33,7 +29,7 @@ class AppointmentScreen extends StatelessWidget {
                       child: topAppBar()))
             ],
             ),
-            Expanded(
+            const Expanded(
           child: SingleChildScrollView(
             child: choose_doctor(),
           ),

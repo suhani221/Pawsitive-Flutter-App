@@ -18,7 +18,7 @@ class _cardState extends State<card> {
       alignment: Alignment.topCenter,
       children: <Widget>[
         Container(
-          margin: EdgeInsets.only(top: 30),
+          margin: const EdgeInsets.only(top: 30),
           width: double.infinity,
           height: 210,
           child: Card(
@@ -31,19 +31,19 @@ class _cardState extends State<card> {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.only(top: 60, bottom: 0, left: 10, right: 10),
+                    padding: const EdgeInsets.only(top: 60, bottom: 0, left: 10, right: 10),
                     child: Column(
                       children: <Widget>[
-                        Text("Dr. ABC", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
-                        SizedBox(height: 10,),
+                        const Text("Dr. ABC", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                        const SizedBox(height: 10,),
                         Row(
-                          children: [
+                          children: const [
                             Text("Clinic Fee Rs 500", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal),),
                             SizedBox(width: 150,),
                             Text("9:00-17:00", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal),),
                           ],
                         ),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                         Row(
                           children: [
                             Image.asset("lib/assets/pic1.png",height: 85,),
@@ -52,7 +52,6 @@ class _cardState extends State<card> {
 
 
                             Image.asset("lib/assets/pic3.png",height: 85,),
-                            Image.asset("lib/assets/pic1.png",height: 85,),
 
 
 
@@ -101,7 +100,7 @@ class _cardState2 extends State<card2> {
         alignment: Alignment.topCenter,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.only(top: 90),
+            margin: const EdgeInsets.only(top: 90),
             width: double.infinity,
             height: 500,
             child: Card(
@@ -114,14 +113,14 @@ class _cardState2 extends State<card2> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     Padding(
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                           top: 60, bottom: 0, left: 10, right: 10),
                       child: Row(
                         children: [
                           Utils.circularImageWithBorder(
                               "lib/assets/doc.png", 42, 1, Colors.white),
                           Column(
-                            children: <Widget>[
+                            children: const <Widget>[
                               Text("Dr. ABC", style: TextStyle(
                                   fontSize: 16, fontWeight: FontWeight.bold),),
                               Text("B.Sc,MBBS", style: TextStyle(
@@ -139,7 +138,7 @@ class _cardState2 extends State<card2> {
                               .of(context)
                               .size
                               .width * 0.05),
-                      child: Divider(
+                      child: const Divider(
                         color: Colors.grey,
                       ),
                     ),
@@ -165,13 +164,13 @@ class _cardState2 extends State<card2> {
                             children: [
                               IconButton(
                                 onPressed: _decrementCounter,
-                                icon: Icon(Icons.remove_circle),
+                                icon: const Icon(Icons.remove_circle),
                                 color: Colors.black,
                                 iconSize: 20,
                               ),
                               IconButton(
                                 onPressed: _incrementCounter,
-                                icon: Icon(Icons.add_circle),
+                                icon: const Icon(Icons.add_circle),
                                 color: Colors.black,
                                 iconSize: 20,
                               ),
@@ -186,21 +185,21 @@ class _cardState2 extends State<card2> {
                        children: [
                          ElevatedButton( onPressed: () {  },
                            style: ElevatedButton.styleFrom(
-                             primary: Colors.white, // Background color
+                             backgroundColor: Colors.white, // Background color
                            ),
-                           child: Text("10:00",style: const TextStyle(
+                           child: const Text("10:00",style: TextStyle(
                                fontWeight: FontWeight.w500,
                                fontSize: 20,
                                color: Colors.black,
                                fontFamily: 'Lato'),),
                          ),
-                         SizedBox(width: 20,),
+                         const SizedBox(width: 20,),
                          ElevatedButton( onPressed: () {  },
-                           child: Text("11:00"),
+                           child: const Text("11:00"),
                          ),
-                         SizedBox(width: 20,),
+                         const SizedBox(width: 20,),
                          ElevatedButton( onPressed: () {  },
-                           child: Text("12:00"),
+                           child: const Text("12:00"),
                           ),
                        ]
                       )

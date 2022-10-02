@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 Container servicesButton(String imageVal, String heading, Color colourVal,
-    double size_percent, context, X) {
+    double sizePercent, context, X) {
   return Container(
     child: Column(
       children: [
         SizedBox(
           height: (MediaQuery.of(context).size).width *
-              size_percent, //height of button
-          width: (MediaQuery.of(context).size).width * size_percent,
+              sizePercent, //height of button
+          width: (MediaQuery.of(context).size).width * sizePercent,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xFFD9D9D9), // Background color
@@ -44,11 +44,11 @@ Container servicesButton(String imageVal, String heading, Color colourVal,
 
 Container serviceButtonURL(
     String imageVal, String heading, Color colourVal, context, String URL) {
-  final Uri _url = Uri.parse(URL);
+  final Uri url = Uri.parse(URL);
 
   Future<void> _launchUrl() async {
-    if (!await launchUrl(_url)) {
-      throw 'Could not launch $_url';
+    if (!await launchUrl(url)) {
+      throw 'Could not launch $url';
     }
   }
 

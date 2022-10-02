@@ -60,7 +60,7 @@ class _ToggleButtonState extends State<ToggleButton> {
       height: widget.height,
       decoration: BoxDecoration(
         color: widget.toggleBackgroundColor,
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(50.0),
         ),
         border: Border.all(color: widget.toggleBorderColor),
@@ -69,13 +69,13 @@ class _ToggleButtonState extends State<ToggleButton> {
         children: [
           AnimatedAlign(
             alignment: Alignment(_toggleXAlign, 0),
-            duration: Duration(milliseconds: 300),
+            duration: const Duration(milliseconds: 300),
             child: Container(
               width: widget.width * 0.5,
               height: widget.height,
               decoration: BoxDecoration(
                 color: widget.toggleColor,
-                borderRadius: BorderRadius.all(
+                borderRadius: const BorderRadius.all(
                   Radius.circular(50.0),
                 ),
               ),
@@ -95,7 +95,7 @@ class _ToggleButtonState extends State<ToggleButton> {
               widget.onRightToggleActive();
             },
             child: Align(
-              alignment: Alignment(-1, 0),
+              alignment: const Alignment(-1, 0),
               child: Container(
                 width: widget.width * 0.5,
                 color: Colors.transparent,
@@ -123,7 +123,7 @@ class _ToggleButtonState extends State<ToggleButton> {
               widget.onLeftToggleActive();
             },
             child: Align(
-              alignment: Alignment(1, 0),
+              alignment: const Alignment(1, 0),
               child: Container(
                 width: widget.width * 0.5,
                 color: Colors.transparent,

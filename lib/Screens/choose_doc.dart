@@ -1,10 +1,7 @@
 //code optimisation done
 import 'package:flutter/material.dart';
-import '../../GlobalCustomWidgets/navigationtop_button.dart';
-import '../../GlobalCustomWidgets/custom_textfield.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../CustomShapes/ShapeHomeScreenTop.dart';
-import '../GlobalCustomWidgets/doc_ard.dart';
-import '../GlobalCustomWidgets/navigation_button.dart';
 import '../GlobalCustomWidgets/top_app_bar.dart';
 
 class choose_doctor extends StatefulWidget {
@@ -55,7 +52,7 @@ class _choose_doctorState  extends State<choose_doctor> {
         children: [
           Stack(
             clipBehavior: Clip.none, children: [
-            Positioned(
+            const Positioned(
                 child: ShapeHomeScreenTop()),
             Positioned(
                 top: 50,
@@ -64,7 +61,7 @@ class _choose_doctorState  extends State<choose_doctor> {
               top: 120,
               child: Padding(
                 padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*0.06),
-                child: Container(
+                child: SizedBox(
                   height: 48,
                   width: MediaQuery.of(context).size.width*0.88,
                   child: Material(
@@ -117,49 +114,54 @@ class _choose_doctorState  extends State<choose_doctor> {
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
                         Padding(
-                          padding: EdgeInsets.only(top: 30, bottom: 0, left: 10, right: 10),
+                          padding: const EdgeInsets.only(top: 30, bottom: 0, left: 10, right: 10),
                           child: Column(
                             children: [
-                              Row(
-                                  children: <Widget>[
-                                    Utils.circularImageWithBorder(
-                                        "lib/assets/doc.png", 52, 1, Colors.transparent),
-                                    SizedBox(width: 20,),
-                                    Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          _foundUsers[index]["name"].toString(),
-                                          style: const TextStyle(color:Colors.grey,fontSize: 14,fontFamily: "Lato"),),
-                                        SizedBox(height: 20,),
-                                        Container(
-                                            padding: EdgeInsets.all(12),
-                                            decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.all(Radius.circular(12)),
-                                              border: Border.all(color: Colors.grey),
-                                            ),
-                                            child:Column(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                              InkWell(
+                                onTap: (){
+                                  Navigator.pushNamed(context, '/doctor_detail');
+                                },
+                                child: Row(
+                                    children: <Widget>[
+                                      Utils.circularImageWithBorder(
+                                          "lib/assets/doc.png", 52, 1, Colors.transparent),
+                                      const SizedBox(width: 20,),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            _foundUsers[index]["name"].toString(),
+                                            style: const TextStyle(color:Colors.grey,fontSize: 14,fontFamily: "Lato"),),
+                                          const SizedBox(height: 20,),
+                                          Container(
+                                              padding: const EdgeInsets.all(12),
+                                              decoration: BoxDecoration(
+                                                borderRadius: const BorderRadius.all(Radius.circular(12)),
+                                                border: Border.all(color: Colors.grey),
+                                              ),
+                                              child:Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
 
-                                              children: [
-                                                Text("MBBS,DOMS,MS-Opthalmology", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal,color: Colors.grey),),
-                                                Text("Opthamalogist", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal,color: Colors.grey),),
-                                                Text("26 Years of Experience", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal,color: Colors.grey),)
-                                              ],
-                                            )
-                                        )],),]),
-                              SizedBox(height: 30,),
+                                                children: const [
+                                                  Text("MBBS,DOMS,MS-Opthalmology", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal,color: Colors.grey),),
+                                                  Text("Opthamalogist", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal,color: Colors.grey),),
+                                                  Text("26 Years of Experience", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal,color: Colors.grey),)
+                                                ],
+                                              )
+                                          )],),]),
+                              ),
+                              const SizedBox(height: 30,),
                               Row(
                                 children: [
-                                  Text("CLOSED TODAY", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal,color: Colors.red),),
-                                  SizedBox(width: 30,),
-                                  Text("9:30AM-08:00PM", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal),),
-                                  SizedBox(width: 30,),
+                                  const Text("CLOSED TODAY", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal,color: Colors.red),),
+                                  const SizedBox(width: 30,),
+                                  const Text("9:30AM-08:00PM", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal),),
+                                  const SizedBox(width: 30,),
 
-                                  Container(
+                                  SizedBox(
                                     height: 55,
-                                    child: ElevatedButton(onPressed: () {  },style: ElevatedButton.styleFrom(
-                                      primary: Colors.white,
+                                    child: ElevatedButton(onPressed: () => launch("tel://21213123123"),style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.white,
                                       elevation: 0,
                                       // Background color
                                     ),

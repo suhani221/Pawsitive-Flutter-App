@@ -10,8 +10,11 @@ class widgetTesting extends StatelessWidget {
       backgroundColor: Colors.black,
       body: Column(
         children: [
-          SizedBox(height: 50,),
-          homeScreenCardDetails('Appointment'),
+          const SizedBox(height: 50,),
+        goToArticle(
+            'Article',
+            'https://www.forbes.com/sites/joanverdon/2022/09/12/pet-insurer-creates-platform-that-predicts-your-dogs-medical-future/?sh=8a1382f1d6df',
+            'Pet Insurer Creates Platform',  'Predict Your Dog’s Medical Future'),
         ],
       ),
     );

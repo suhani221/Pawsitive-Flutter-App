@@ -22,7 +22,7 @@ class MyPainter extends CustomPainter {
     Path path = Path();
 
 
-    paint.color = Color(0xffFFFFFF);
+    paint.color = const Color(0xffFFFFFF);
     path = Path();
     path.lineTo(0, 0);
     path.cubicTo(0, 0, size.width, 0, size.width, 0);

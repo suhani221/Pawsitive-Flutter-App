@@ -91,6 +91,7 @@ flutter:
     - lib/assets/home.png
     - lib/assets/pulse.png
     - lib/assets/profile.png
+    - lib/assets/profilePicture.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

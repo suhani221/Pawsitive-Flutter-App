@@ -20,20 +20,20 @@ class _infoLaundaryCardState extends State<infoLaundaryCard> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Center(
+              const Center(
                 child: Text(
                   'LAUNDARY CARD',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
-                children: [
+                children: const [
                   SizedBox(
                     width: 20,
                   ),
@@ -43,11 +43,11 @@ class _infoLaundaryCardState extends State<infoLaundaryCard> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
-                children: [
+                children: const [
                   SizedBox(
                     width: 20,
                   ),
@@ -57,11 +57,11 @@ class _infoLaundaryCardState extends State<infoLaundaryCard> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
-                children: [
+                children: const [
                   SizedBox(
                     width: 20,
                   ),
@@ -71,11 +71,11 @@ class _infoLaundaryCardState extends State<infoLaundaryCard> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
-                children: [
+                children: const [
                   SizedBox(
                     width: 20,
                   ),
@@ -85,8 +85,8 @@ class _infoLaundaryCardState extends State<infoLaundaryCard> {
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
+              const Padding(
+                padding: EdgeInsets.all(10.0),
                 child: Align(
                   alignment: Alignment.topRight,
                   child: Text("TECHNOWASH"),

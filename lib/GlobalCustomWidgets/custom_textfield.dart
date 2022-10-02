@@ -10,7 +10,7 @@ Container CustomTextField(String FieldName, bool obscureBool) {
         elevation: 2.0,
         shadowColor: Colors.white,
         child: TextField(
-          style: TextStyle(color: Colors.black),
+          style: const TextStyle(color: Colors.black),
           obscureText: obscureBool,
           textAlign: TextAlign.left,
           decoration: InputDecoration(
@@ -18,16 +18,16 @@ Container CustomTextField(String FieldName, bool obscureBool) {
             fillColor: Colors.white,
             border: InputBorder.none,
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(width: 2, color: Colors.white),
+              borderSide: const BorderSide(width: 2, color: Colors.white),
               borderRadius: BorderRadius.circular(25),
             ),
             focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(width: 2, color: Colors.white),
+              borderSide: const BorderSide(width: 2, color: Colors.white),
               borderRadius: BorderRadius.circular(25),
             ),
             hintText: FieldName,
 
-            hintStyle: TextStyle(
+            hintStyle: const TextStyle(
                 fontSize: 18.0,
                 color: Colors.grey,
                 fontWeight: FontWeight.w600),

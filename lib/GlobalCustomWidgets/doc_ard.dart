@@ -15,7 +15,7 @@ class _doc_cardState extends State<doc_card> {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Container(
+        SizedBox(
           width: double.infinity,
           height: 252,
           child: Padding(
@@ -30,31 +30,31 @@ class _doc_cardState extends State<doc_card> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     Padding(
-                      padding: EdgeInsets.only(top: 30, bottom: 0, left: 10, right: 10),
+                      padding: const EdgeInsets.only(top: 30, bottom: 0, left: 10, right: 10),
                       child: Column(
                         children: [
                           Row(
                             children: <Widget>[
                               Utils.circularImageWithBorder(
                                   "lib/assets/doc.png", 52, 1, Colors.transparent),
-                           SizedBox(width: 30,),
+                           const SizedBox(width: 30,),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                 Text(
+                                 const Text(
                                 "",
-                                 style: const TextStyle(color:Colors.grey,fontSize: 14,fontFamily: "Lato"),),
-                                  SizedBox(height: 20,),
+                                 style: TextStyle(color:Colors.grey,fontSize: 14,fontFamily: "Lato"),),
+                                  const SizedBox(height: 20,),
                                   Container(
-                                   padding: EdgeInsets.all(12),
+                                   padding: const EdgeInsets.all(12),
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                                      borderRadius: const BorderRadius.all(Radius.circular(12)),
                                     border: Border.all(color: Colors.grey),
                                     ),
                                     child:Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
 
-                                      children: [
+                                      children: const [
     Text("MBBS,DOMS,MS-Opthalmology", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal,color: Colors.grey),),
     Text("Opthamalogist", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal,color: Colors.grey),),
     Text("26 Years of Experience", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal,color: Colors.grey),)
@@ -65,18 +65,18 @@ class _doc_cardState extends State<doc_card> {
                               ),
   ]
                     ),
-                              SizedBox(height: 30,),
+                              const SizedBox(height: 30,),
                               Row(
                                 children: [
-                                  Text("CLOSED TODAY", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal,color: Colors.red),),
-                                  SizedBox(width: 30,),
-                                  Text("9:30AM-08:00PM", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal),),
-                                  SizedBox(width: 30,),
+                                  const Text("CLOSED TODAY", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal,color: Colors.red),),
+                                  const SizedBox(width: 30,),
+                                  const Text("9:30AM-08:00PM", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal),),
+                                  const SizedBox(width: 30,),
 
-                                  Container(
+                                  SizedBox(
                                     height: 55,
                                     child: ElevatedButton(onPressed: () {  },style: ElevatedButton.styleFrom(
-                                      primary: Colors.white,
+                                      backgroundColor: Colors.white,
                                       elevation: 0,
                                       // Background color
                                     ),

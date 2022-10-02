@@ -54,12 +54,12 @@ class _settingsState extends State<settings> {
                 clipBehavior: Clip.none, children: [
                 Positioned(
                     child: Container(
-                        child: ShapeSelectCityOne())),
+                        child: const ShapeSelectCityOne())),
                 Positioned(
                   top: 120,
                   child: Padding(
                     padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*0.06),
-                    child: Container(
+                    child: SizedBox(
                       height: 48,
                       width: MediaQuery.of(context).size.width*0.88,
                       child: Material(
@@ -95,7 +95,7 @@ class _settingsState extends State<settings> {
                   ),)
               ],
               ),
-              SizedBox(height: 80,),
+              const SizedBox(height: 80,),
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(25, 10, 25, 220),
@@ -118,13 +118,13 @@ class _settingsState extends State<settings> {
                               style: const TextStyle(color:Colors.black,fontSize: 14,fontFamily: "Lato",fontWeight: FontWeight.bold),
                             ),
                             trailing: Container(
-                              padding: EdgeInsets.symmetric(horizontal: 50.0),
+                              padding: const EdgeInsets.symmetric(horizontal: 50.0),
                               child: ToggleButton(
                                 width: 80.0,
                                 height: 30.0,
                                 toggleBackgroundColor: Colors.white,
                                 toggleBorderColor: (Colors.grey[350])!,
-                                toggleColor: (Colors.blue)!,
+                                toggleColor: (Colors.blue),
                                 activeTextColor: Colors.white,
                                 inactiveTextColor: Colors.white,
                                 leftDescription: 'on',

@@ -19,8 +19,8 @@ class sign_up extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(height: height * 0.15),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(126, 6, 10, 6),
+            const Padding(
+              padding: EdgeInsets.fromLTRB(126, 6, 10, 6),
               child: Text('Welcome!',
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -56,9 +56,9 @@ class sign_up extends StatelessWidget {
             Center(
               child: Row(children: <Widget>[
                 Expanded(
-                  child: new Container(
+                  child: Container(
                       margin: const EdgeInsets.only(left: 60.0, right: 10.0),
-                      child: Divider(
+                      child: const Divider(
                         thickness: 2.5,
                         color: Colors.white38,
                         height: 50,
@@ -66,9 +66,9 @@ class sign_up extends StatelessWidget {
                 ),
 
                 Expanded(
-                  child: new Container(
+                  child: Container(
                       margin: const EdgeInsets.only(left: 10.0, right: 60.0),
-                      child: Divider(
+                      child: const Divider(
                         thickness: 2.5,
                         color: Colors.white38,
                         height: 50,

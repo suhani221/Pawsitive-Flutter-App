@@ -1,8 +1,7 @@
 //code optimisation done
 import 'package:flutter/material.dart';
-import '../../GlobalCustomWidgets/navigation_button.dart';
-import '../../GlobalCustomWidgets/custom_poviders.dart';
 import '../CustomShapes/ShapeWelcomeOne.dart';
+import 'appointment.dart';
 
 class WelcomeScreen extends StatelessWidget {
   var size, height, width;
@@ -21,8 +20,8 @@ class WelcomeScreen extends StatelessWidget {
               'lib/assets/welcomeDog.png',
               width: MediaQuery.of(context).size.width,
             ),
-            SizedBox(height: 20,),
-            Text('Welcome',
+            const SizedBox(height: 20,),
+            const Text('Welcome',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -30,9 +29,9 @@ class WelcomeScreen extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            SizedBox(height: 10,),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+            const SizedBox(height: 10,),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
               child: Text('Let\'s get you up and running, but we\'ll need some information first',
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -46,7 +45,7 @@ class WelcomeScreen extends StatelessWidget {
                   alignment: Alignment.bottomCenter,
                   child: Stack(
                       children: [
-                        Positioned(child: ShapeWelcomeOne()),
+                        const Positioned(child: ShapeWelcomeOne()),
                         Positioned(
                           top: 20,
                           left: 140,
@@ -65,7 +64,7 @@ class WelcomeScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              SizedBox(width: 40,),
+                              const SizedBox(width: 40,),
                               IconButton(onPressed: (){
                                 Navigator.pushNamed(context, '/signup');
                               },

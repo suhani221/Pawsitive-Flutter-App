@@ -2,24 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:hackathon/Screens/HomeScreen.dart';
 import 'package:hackathon/screens/ServiceProviders.dart';
 import 'package:hackathon/screens/choose_doc.dart';
-import 'package:hackathon/screens/doctor_detail.dart';
-import 'package:hackathon/screens/time_booking.dart';
-import 'package:hackathon/screens/timeline.dart';
-import 'CustomShapes/ShapeTopCircleProvider.dart';
-import 'Screens/trial.dart';
 import 'screens/sign_in.dart';
 import 'screens/sign_up.dart';
-import 'GlobalCustomWidgets/top_app_bar.dart';
-import 'CustomShapes/ShapeScreenNameOne.dart';
 import 'Screens/GetStarted.dart';
 import 'Screens/SelectLocation.dart';
 import 'Screens/WelcomeScreen.dart';
-import 'CustomShapes/ShapeWelcomeOne.dart';
 import 'Screens/widgetTesting.dart';
 import 'Screens/AppointmentScreen.dart';
 import 'Screens/HealthScreen.dart';
 import "Screens/ProfileScreen.dart";
-import 'Screens/HomeScreen.dart';
+import "Screens/doctor_detail.dart";
+import 'Screens/timeline.dart';
 
 
 
@@ -37,16 +30,17 @@ class Hack extends StatelessWidget {
         '/login': (context) =>sign_in(),
         '/signup': (context) =>sign_up(),
         '/provider': (context) =>provider(),
-        '/get_started': (context) => GetStarted(),
-        '/select_location': (context) => SelectLocation(),
+        '/get_started': (context) => const GetStarted(),
+        '/select_location': (context) => const SelectLocation(),
         '/welcome': (context) => WelcomeScreen(),
         '/home_screen': (context) =>HomeScreen(),
         '/appointment_screen': (context) => AppointmentScreen(),
         '/health_screen': (context) => HealthScreen(),
         '/profile_screen': (context) => ProfileScreen(),
-        '/widget_test': (context) => widgetTesting(),
-        '/choose_screen': (context) => choose_doctor(),
-
+        '/widget_test': (context) => const widgetTesting(),
+        '/choose_screen': (context) => const choose_doctor(),
+        '/doctor_detail': (context) => const SliverDoctorDetail(),
+        '/vaccine_timeline': (context) => timeline(),
       },
     );
   }

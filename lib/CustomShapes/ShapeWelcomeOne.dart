@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ShapeWelcomeOne extends StatelessWidget {
 
-  ShapeWelcomeOne({super.key});
+  const ShapeWelcomeOne({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,19 +27,19 @@ class MyPainter extends CustomPainter {
     // Path number 1
 
 
-    paint.color = Color(0xff2891ED);
-    final double _xScaling = size.width / 390;
-    final double _yScaling = size.height / 87;
-    path.lineTo(80 * _xScaling,0 * _yScaling);
-    path.cubicTo(80 * _xScaling,0 * _yScaling,390 * _xScaling,0 * _yScaling,390 * _xScaling,0 * _yScaling,);
-    path.cubicTo(0 * _xScaling,0 * _yScaling,0 * _xScaling,0 * _yScaling,390 * _xScaling,0 * _yScaling,);
-    path.cubicTo(390 * _xScaling,0 * _yScaling,390 * _xScaling,87 * _yScaling,390 * _xScaling,87 * _yScaling,);
-    path.cubicTo(0 * _xScaling,0 * _yScaling,0 * _xScaling,0 * _yScaling,390 * _xScaling,87 * _yScaling,);
-    path.cubicTo(390 * _xScaling,87 * _yScaling,0 * _xScaling,87 * _yScaling,0 * _xScaling,87 * _yScaling,);
-    path.cubicTo(0 * _xScaling,0 * _yScaling,0 * _xScaling,0 * _yScaling,0 * _xScaling,87 * _yScaling,);
-    path.cubicTo(0 * _xScaling,87 * _yScaling,0 * _xScaling,80 * _yScaling,0 * _xScaling,80 * _yScaling,);
-    path.cubicTo(-5.410830008785422e-15 * _xScaling,35.81722001353654 * _yScaling,35.817220013536534 * _xScaling,8.116245013178133e-15 * _yScaling,80 * _xScaling,0 * _yScaling,);
-    path.cubicTo(80 * _xScaling,0 * _yScaling,80 * _xScaling,0 * _yScaling,80 * _xScaling,0 * _yScaling,);
+    paint.color = const Color(0xff2891ED);
+    final double xScaling = size.width / 390;
+    final double yScaling = size.height / 87;
+    path.lineTo(80 * xScaling,0 * yScaling);
+    path.cubicTo(80 * xScaling,0 * yScaling,390 * xScaling,0 * yScaling,390 * xScaling,0 * yScaling,);
+    path.cubicTo(0 * xScaling,0 * yScaling,0 * xScaling,0 * yScaling,390 * xScaling,0 * yScaling,);
+    path.cubicTo(390 * xScaling,0 * yScaling,390 * xScaling,87 * yScaling,390 * xScaling,87 * yScaling,);
+    path.cubicTo(0 * xScaling,0 * yScaling,0 * xScaling,0 * yScaling,390 * xScaling,87 * yScaling,);
+    path.cubicTo(390 * xScaling,87 * yScaling,0 * xScaling,87 * yScaling,0 * xScaling,87 * yScaling,);
+    path.cubicTo(0 * xScaling,0 * yScaling,0 * xScaling,0 * yScaling,0 * xScaling,87 * yScaling,);
+    path.cubicTo(0 * xScaling,87 * yScaling,0 * xScaling,80 * yScaling,0 * xScaling,80 * yScaling,);
+    path.cubicTo(-5.410830008785422e-15 * xScaling,35.81722001353654 * yScaling,35.817220013536534 * xScaling,8.116245013178133e-15 * yScaling,80 * xScaling,0 * yScaling,);
+    path.cubicTo(80 * xScaling,0 * yScaling,80 * xScaling,0 * yScaling,80 * xScaling,0 * yScaling,);
     canvas.drawPath(path, paint);
   }
   @override

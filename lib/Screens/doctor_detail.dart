@@ -8,14 +8,13 @@ import '/styles/colors.dart';
 import '/styles/styles.dart';
 import "package:latlong2/latlong.dart" as latLng;
 
-import 'appointment.dart';
 
 class SliverDoctorDetail extends StatelessWidget {
   const SliverDoctorDetail({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
@@ -38,12 +37,12 @@ class DetailBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          DetailDoctorCard(),
-          SizedBox(
+          const DetailDoctorCard(),
+          const SizedBox(
             height: 215,
           ),
           Padding(
-            padding:EdgeInsets.symmetric(horizontal: 20.0),
+            padding:const EdgeInsets.symmetric(horizontal: 20.0),
             child: Row(
               children: const [
                 NumberCard(
@@ -63,7 +62,7 @@ class DetailBody extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Padding(
@@ -73,7 +72,7 @@ class DetailBody extends StatelessWidget {
               style: kTitleStyle,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Padding(
@@ -87,7 +86,7 @@ class DetailBody extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           Padding(
@@ -97,24 +96,24 @@ class DetailBody extends StatelessWidget {
               style: kTitleStyle,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
             child: DoctorLocation(),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
       Container(
-        padding: EdgeInsets.symmetric(horizontal: 50.0),
+        padding: const EdgeInsets.symmetric(horizontal: 50.0),
         child: ToggleButton(
           width: 300.0,
           height: 60.0,
           toggleBackgroundColor: Colors.white,
           toggleBorderColor: (Colors.grey[350])!,
-          toggleColor: (Colors.blue)!,
+          toggleColor: (Colors.blue),
           activeTextColor: Colors.white,
           inactiveTextColor: Colors.grey,
           leftDescription: 'FEEDBACK',
@@ -202,7 +201,7 @@ class NumberCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
           color: Color(MyColors.bg03),
         ),
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           vertical: 30,
           horizontal: 15,
         ),
@@ -216,7 +215,7 @@ class NumberCard extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Text(
@@ -247,7 +246,7 @@ class DetailDoctorCard extends StatelessWidget {
           clipBehavior: Clip.none, children: [
           Positioned(
               child: Container(
-                  child: ShapeSelectCityOne())),
+                  child: const ShapeSelectCityOne())),
           Positioned(
             top: 50,
             left: 5,
@@ -265,9 +264,9 @@ class DetailDoctorCard extends StatelessWidget {
             top: 100,
             child: Padding(
               padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*0.06),
-              child: Container(
+              child: SizedBox(
                 width: MediaQuery.of(context).size.width*0.88,
-                child: card(),
+                child: const card(),
                 ),
               ),
             ),

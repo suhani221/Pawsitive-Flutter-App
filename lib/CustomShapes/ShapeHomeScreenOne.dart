@@ -7,11 +7,11 @@ class ShapeHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         boxShadow: [
           BoxShadow(
             color: Colors.black12,
-            offset: const Offset(
+            offset: Offset(
               10.0,
               5.0,
             ),
@@ -46,14 +46,14 @@ class MyPainter extends CustomPainter {
 
     paint.color = shapeColor;
     path = Path();
-    final double _xScaling = size.width / 390;
-    final double _yScaling = size.height / 351;
-    path.lineTo(0 * _xScaling,0 * _yScaling);
-    path.cubicTo(0 * _xScaling,0 * _yScaling,390 * _xScaling,0 * _yScaling,390 * _xScaling,0 * _yScaling,);
-    path.cubicTo(390 * _xScaling,0 * _yScaling,390 * _xScaling,351 * _yScaling,390 * _xScaling,351 * _yScaling,);
-    path.cubicTo(390 * _xScaling,351 * _yScaling,80 * _xScaling,351 * _yScaling,80 * _xScaling,351 * _yScaling,);
-    path.cubicTo(35.81722001353654 * _xScaling,351 * _yScaling,5.410830008785422e-15 * _xScaling,315.18277998646346 * _yScaling,0 * _xScaling,271 * _yScaling,);
-    path.cubicTo(0 * _xScaling,271 * _yScaling,0 * _xScaling,0 * _yScaling,0 * _xScaling,0 * _yScaling,);
+    final double xScaling = size.width / 390;
+    final double yScaling = size.height / 351;
+    path.lineTo(0 * xScaling,0 * yScaling);
+    path.cubicTo(0 * xScaling,0 * yScaling,390 * xScaling,0 * yScaling,390 * xScaling,0 * yScaling,);
+    path.cubicTo(390 * xScaling,0 * yScaling,390 * xScaling,351 * yScaling,390 * xScaling,351 * yScaling,);
+    path.cubicTo(390 * xScaling,351 * yScaling,80 * xScaling,351 * yScaling,80 * xScaling,351 * yScaling,);
+    path.cubicTo(35.81722001353654 * xScaling,351 * yScaling,5.410830008785422e-15 * xScaling,315.18277998646346 * yScaling,0 * xScaling,271 * yScaling,);
+    path.cubicTo(0 * xScaling,271 * yScaling,0 * xScaling,0 * yScaling,0 * xScaling,0 * yScaling,);
     canvas.drawPath(path, paint);
   }
   @override

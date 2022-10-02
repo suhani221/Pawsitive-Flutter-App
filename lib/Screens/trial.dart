@@ -1,9 +1,5 @@
 //code optimisation done
 import 'package:flutter/material.dart';
-import '../../GlobalCustomWidgets/navigation_button.dart';
-import '../../GlobalCustomWidgets/custom_poviders.dart';
-import '../CustomShapes/ShapeTopCircleProvider.dart';
-import '../CustomShapes/ShapeSelectCityOne.dart';
 import '../GlobalCustomWidgets/top_app_bar.dart';
 import '../CustomShapes/ShapeHomeScreenOne.dart';
 
@@ -17,7 +13,7 @@ class HomeScreenT extends StatelessWidget {
     width = size.width;
 
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: Stack(

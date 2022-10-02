@@ -62,7 +62,7 @@ class _SelectLocationState extends State<SelectLocation> {
                 clipBehavior: Clip.none, children: [
                   Positioned(
                       child: Container(
-                          child: ShapeSelectCityOne())),
+                          child: const ShapeSelectCityOne())),
                   Positioned(
                       top: 50,
                       left: 5,
@@ -77,7 +77,7 @@ class _SelectLocationState extends State<SelectLocation> {
                           ),
                           const Text('Select your city',
                           style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600)),
-                          SizedBox(width: 120,),
+                          const SizedBox(width: 120,),
                           IconButton(
                             icon: const Icon(Icons.arrow_forward_rounded, size: 30,),
                             color: Colors.white,
@@ -92,7 +92,7 @@ class _SelectLocationState extends State<SelectLocation> {
                     top: 120,
                     child: Padding(
                       padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*0.06),
-                      child: Container(
+                      child: SizedBox(
                       height: 48,
                       width: MediaQuery.of(context).size.width*0.88,
                       child: Material(
@@ -128,7 +128,7 @@ class _SelectLocationState extends State<SelectLocation> {
                     ),)
                 ],
               ),
-              SizedBox(height: 40,),
+              const SizedBox(height: 40,),
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),

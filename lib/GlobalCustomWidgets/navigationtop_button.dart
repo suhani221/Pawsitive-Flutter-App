@@ -24,8 +24,7 @@ class _navigationtopbuttonState extends State<navigationtopbutton> {
           })
         },
         style: ElevatedButton.styleFrom(
-          primary: widget.stateVariable ? Colors.white : Colors.purple, // Background color
-          onPrimary: widget.stateVariable ? Colors.blue : Colors.purple,
+          foregroundColor: widget.stateVariable ? Colors.blue : Colors.purple, backgroundColor: widget.stateVariable ? Colors.white : Colors.purple,
           fixedSize: const Size(138, 45),
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15.0),
@@ -33,7 +32,7 @@ class _navigationtopbuttonState extends State<navigationtopbutton> {
           ),// Text Color (Foreground color)
         ),
         child: Text(
-          widget.stateName,          style: TextStyle(
+          widget.stateName,          style: const TextStyle(
               color: Colors.black, fontWeight: FontWeight.w600, fontSize: 18),
         ),
 

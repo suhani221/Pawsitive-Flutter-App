@@ -10,10 +10,10 @@ class _topAppBarState extends State<topAppBar> {
   int _currentIndex=0;
 
   List cardList=[
-    ProfileView(),
-    HomeViewNew(),
-    HealthView(),
-    AppointmentView(),
+    const ProfileView(),
+    const HomeViewNew(),
+    const HealthView(),
+    const AppointmentView(),
 
   ];
 
@@ -27,7 +27,7 @@ class _topAppBarState extends State<topAppBar> {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return  SizedBox(
       width: MediaQuery.of(context).size.width,
       child: CarouselSlider(
         options: CarouselOptions(
@@ -45,7 +45,7 @@ class _topAppBarState extends State<topAppBar> {
         items: cardList.map((card){
           return Builder(
               builder:(BuildContext context){
-                return Container(
+                return SizedBox(
                   height: MediaQuery.of(context).size.height*0.30,
                   width: MediaQuery.of(context).size.width,
                   child: Card(
@@ -72,7 +72,7 @@ class ProfileView extends StatefulWidget {
 class _ProfileViewState extends State<ProfileView> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 32,
       width: 32,
       child: ElevatedButton(
@@ -105,7 +105,7 @@ class _HomeViewNewState extends State<HomeViewNew> {
         Navigator.pushNamed(context, '/home_screen');
       },
 
-      child: Container(
+      child: SizedBox(
           height: 32,
           width: 32,
           child: Image.asset('lib/assets/home.png')),
@@ -124,7 +124,7 @@ class HealthView extends StatelessWidget {
       onPressed: () {
         Navigator.pushNamed(context, '/health_screen');
         },
-      child: Container(
+      child: SizedBox(
           height: 32,
           width: 32,
           child: Image.asset('lib/assets/heart.png')),
@@ -143,7 +143,7 @@ class AppointmentView extends StatelessWidget {
       onPressed: () {
         Navigator.pushNamed(context, '/choose_screen');
       },
-      child: Container(
+      child: SizedBox(
           height: 50,
           width: 50,
           child: Image.asset('lib/assets/pulse.png')),
@@ -158,7 +158,7 @@ class HomeViewOld extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-          shape: const CircleBorder(), primary: Colors.red),
+          shape: const CircleBorder(), backgroundColor: Colors.red),
       child: Container(
         width: 200,
         height: 200,

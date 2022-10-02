@@ -1,7 +1,6 @@
 // main.dart
 import 'package:flutter/material.dart';
 import '../CustomShapes/ShapeSelectCityOne.dart';
-import '../GlobalCustomWidgets/toggle_button.dart';
 
 class timeline extends StatefulWidget {
   const timeline({Key? key}) : super(key: key);
@@ -58,12 +57,12 @@ class _timelineState extends State<timeline> {
                 clipBehavior: Clip.none, children: [
                 Positioned(
                     child: Container(
-                        child: ShapeSelectCityOne())),
+                        child: const ShapeSelectCityOne())),
                 Positioned(
                   top: 120,
                   child: Padding(
                     padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*0.06),
-                    child: Container(
+                    child: SizedBox(
                       height: 48,
                       width: MediaQuery.of(context).size.width*0.88,
                       child: Material(
@@ -99,9 +98,9 @@ class _timelineState extends State<timeline> {
                   ),)
               ],
               ),
-                SizedBox(height: 40,),
-                Center(child: Text("Clinic Visits", style: const TextStyle(color:Colors.black,fontSize: 26,fontFamily: "Lato",fontWeight:FontWeight.bold))),
-              SizedBox(height: 30,),
+                const SizedBox(height: 40,),
+                const Center(child: Text("Clinic Visits", style: TextStyle(color:Colors.black,fontSize: 26,fontFamily: "Lato",fontWeight:FontWeight.bold))),
+              const SizedBox(height: 30,),
 
               Expanded(
                 child:  Padding(

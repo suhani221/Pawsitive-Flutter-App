@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
     width = size.width;
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Container(
+      body: SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: Column(
@@ -45,35 +45,47 @@ class HomeScreen extends StatelessWidget {
                             Positioned(
                                 top: 150,
                                 left: 50,
-                                child: homeScreenCardDetails('Article'))
+                                child: goToArticle(
+                                    'Article',
+                                    'https://www.forbes.com/sites/joanverdon/2022/09/12/pet-insurer-creates-platform-that-predicts-your-dogs-medical-future/?sh=8a1382f1d6df',
+                                'Pet Insurer Creates',  'Platform'))
                           ]
                       ),
 
                   ),
-
                   Positioned(
-                      top: 250,
-                      child:
-                      Stack(
-                          children: [
-                            ShapeHomeScreen(
-                              shapeColor: const Color(0xFF2a91ea),
-                            ),
-                            Positioned(
+                    top: 250,
+                    child:
+                    Stack(
+                        children: [
+                          ShapeHomeScreen(
+                            shapeColor: const Color(0xFF2a91ea),
+                          ),
+                          Positioned(
                               top: 150,
-                                left: 50,
-                                child: homeScreenCardDetails('Appointment'))
-                          ]
-                      ),
+                              left: 50,
+                              child: goToArticle(
+                                  'Article',
+                                  'https://www.forbes.com/sites/joanverdon/2022/09/12/pet-insurer-creates-platform-that-predicts-your-dogs-medical-future/?sh=8a1382f1d6df',
+                                  'Pet Insurer Creates',  'Platform'))
+                        ]
+                    ),
                   ),
                   Positioned(
                     top: 0,
-                      child:
-                      ShapeHomeScreen(
-                        shapeColor: const Color(0xFF52AFFF),
-                      ),
+                    child:
+                    Stack(
+                        children: [ShapeHomeScreen(
+                          shapeColor: const Color(0xFF52AFFF),
+                        ),
+                          Positioned(
+                              top: 170,
+                              left: 50,
+                              child: homeScreenCardDetails('Appointment'))
+                        ]
+                    ),
                   ),
-                  Positioned(
+                  const Positioned(
                     top: 0,
                       child: ShapeHomeScreenTop()),
                   Positioned(

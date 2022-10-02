@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-Container CustomField(String ButtonName,String asset) {
-  return Container(
+SizedBox CustomField(String ButtonName,String asset) {
+  return SizedBox(
     height: 51,
     child: Padding(
       padding: const EdgeInsets.symmetric(horizontal: 40.0),
@@ -20,7 +20,7 @@ Container CustomField(String ButtonName,String asset) {
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25.0),
-                      side: BorderSide(color: Colors.white)),
+                      side: const BorderSide(color: Colors.white)),
                 )),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.center, //Center Row contents horizontally,
@@ -31,7 +31,7 @@ Container CustomField(String ButtonName,String asset) {
                 Text(
                     ButtonName,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 16, color: Color(0xFF3F4079))
+                    style: const TextStyle(fontSize: 16, color: Color(0xFF3F4079))
                 ),
               ],
             )),
