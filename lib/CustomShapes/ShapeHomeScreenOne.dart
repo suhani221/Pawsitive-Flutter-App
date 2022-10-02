@@ -6,12 +6,27 @@ class ShapeHomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomPaint(
-        painter: MyPainter(shapeColor: shapeColor),
-        child: SizedBox(
-            width: MediaQuery.of(context).size.width,
-            height: 351
-        )
+    return Container(
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            offset: const Offset(
+              10.0,
+              5.0,
+            ),
+            blurRadius: 100.0,
+            spreadRadius: 5.0,
+          ), //BoxShadow
+        ],
+      ),
+      child: CustomPaint(
+          painter: MyPainter(shapeColor: shapeColor),
+          child: SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: 351
+          )
+      ),
     );
   }
 }
