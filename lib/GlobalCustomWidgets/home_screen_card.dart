@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-TextButton homeScreenCardDetails(String heading) {
+TextButton homeScreenCardDetails(String heading, context) {
     return TextButton(
-      onPressed: () {  },
+      onPressed: () {
+        Navigator.pushNamed(context, '/schedule_tab');
+      },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[

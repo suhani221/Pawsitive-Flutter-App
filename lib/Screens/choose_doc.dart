@@ -82,7 +82,7 @@ class _choose_doctorState  extends State<choose_doctor> {
                             borderRadius: BorderRadius.circular(28),
                             borderSide: const BorderSide(width: 2, color: Colors.white)
                         ),
-                        hintText: 'Search for Settings',
+                        hintText: 'Search for doctors',
                         hintStyle: const TextStyle(
                             color: Colors.grey,
                             fontSize: 14,

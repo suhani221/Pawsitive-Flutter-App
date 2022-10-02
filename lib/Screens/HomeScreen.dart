@@ -81,7 +81,7 @@ class HomeScreen extends StatelessWidget {
                           Positioned(
                               top: 170,
                               left: 50,
-                              child: homeScreenCardDetails('Appointment'))
+                              child: homeScreenCardDetails('Appointment', context))
                         ]
                     ),
                   ),

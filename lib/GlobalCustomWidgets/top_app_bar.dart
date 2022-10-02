@@ -14,6 +14,7 @@ class _topAppBarState extends State<topAppBar> {
     const HomeViewNew(),
     const HealthView(),
     const AppointmentView(),
+    const SettingsView(),
 
   ];
 
@@ -147,6 +148,25 @@ class AppointmentView extends StatelessWidget {
           height: 50,
           width: 50,
           child: Image.asset('lib/assets/pulse.png')),
+    );
+  }
+}
+
+class SettingsView extends StatelessWidget {
+  const SettingsView({ Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+          shape: const CircleBorder(), backgroundColor: Colors.white),
+      onPressed: () {
+        Navigator.pushNamed(context, '/settings');
+      },
+      child: SizedBox(
+          height: 50,
+          width: 50,
+          child: Icon(Icons.settings, color: Colors.grey, size: 50,)),
     );
   }
 }

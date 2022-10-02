@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hackathon/Screens/HomeScreen.dart';
 import 'package:hackathon/screens/ServiceProviders.dart';
 import 'package:hackathon/screens/choose_doc.dart';
+import 'Screens/ScheduleTab.dart';
+import 'Screens/SettingScreen.dart';
 import 'screens/sign_in.dart';
 import 'screens/sign_up.dart';
 import 'Screens/GetStarted.dart';
@@ -41,6 +43,8 @@ class Hack extends StatelessWidget {
         '/choose_screen': (context) => const choose_doctor(),
         '/doctor_detail': (context) => const SliverDoctorDetail(),
         '/vaccine_timeline': (context) => timeline(),
+        '/schedule_tab': (context) => ScheduleTab(),
+        '/settings': (context) => settings(),
       },
     );
   }

@@ -98,7 +98,7 @@ class _settingsState extends State<settings> {
               const SizedBox(height: 80,),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(25, 10, 25, 220),
+                  padding: const EdgeInsets.fromLTRB(25, 10, 25, 110),
                   child: Card(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
