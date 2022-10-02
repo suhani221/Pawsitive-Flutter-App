@@ -56,8 +56,9 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
-
+  snippet_coder_utils: ^1.0.12
   adobe_xd: ^2.0.1
+  api_cache_manager: ^1.0.2
   flutter_svg: ^1.1.5
   carousel_slider: ^2.2.1
   flutter_map: ^0.14.0
@@ -83,6 +84,7 @@ flutter:
     - lib/assets/pic1.png
     - lib/assets/pic2.png
     - lib/assets/pic3.png
+    - lib/assets/message.png
     - lib/assets/welcomeDog.png
     - lib/assets/google.svg
 

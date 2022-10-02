@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/Screens/HomeScreen.dart';
 import 'package:hackathon/screens/ServiceProviders.dart';
+import 'package:hackathon/screens/choose_doc.dart';
 import 'CustomShapes/ShapeTopCircleProvider.dart';
 import 'Screens/trial.dart';
 import 'screens/sign_in.dart';
@@ -31,7 +32,7 @@ class Hack extends StatelessWidget {
         '/get_started': (context) => GetStarted(),
         '/select_location': (context) => SelectLocation(),
         '/welcome': (context) => WelcomeScreen(),
-        '/home': (context) => HomeScreenT(),
+        '/home': (context) => choose_doc(),
 
       },
     );
