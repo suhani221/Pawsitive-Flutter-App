@@ -79,9 +79,7 @@ class _ProfileViewState extends State<ProfileView> {
         style: ElevatedButton.styleFrom(
             shape: const CircleBorder(), backgroundColor: Colors.white),
         onPressed: () {
-          setState(() {
-
-          });
+          Navigator.pushNamed(context, '/profile_screen');
         },
 
         child: Image.asset('lib/assets/profile.png'),
@@ -104,9 +102,7 @@ class _HomeViewNewState extends State<HomeViewNew> {
       style: ElevatedButton.styleFrom(
           shape: const CircleBorder(), backgroundColor: Colors.white),
       onPressed: () {
-        setState(() {
-
-        });
+        Navigator.pushNamed(context, '/home_screen');
       },
 
       child: Container(
@@ -126,7 +122,8 @@ class HealthView extends StatelessWidget {
       style: ElevatedButton.styleFrom(
           shape: const CircleBorder(), backgroundColor: Colors.white),
       onPressed: () {
-      },
+        Navigator.pushNamed(context, '/health_screen');
+        },
       child: Container(
           height: 32,
           width: 32,
@@ -144,6 +141,7 @@ class AppointmentView extends StatelessWidget {
       style: ElevatedButton.styleFrom(
           shape: const CircleBorder(), backgroundColor: Colors.white),
       onPressed: () {
+        Navigator.pushNamed(context, '/choose_screen');
       },
       child: Container(
           height: 50,

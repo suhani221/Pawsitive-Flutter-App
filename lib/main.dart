@@ -16,6 +16,10 @@ import 'Screens/SelectLocation.dart';
 import 'Screens/WelcomeScreen.dart';
 import 'CustomShapes/ShapeWelcomeOne.dart';
 import 'Screens/widgetTesting.dart';
+import 'Screens/AppointmentScreen.dart';
+import 'Screens/HealthScreen.dart';
+import "Screens/ProfileScreen.dart";
+import 'Screens/HomeScreen.dart';
 
 
 
@@ -36,9 +40,12 @@ class Hack extends StatelessWidget {
         '/get_started': (context) => GetStarted(),
         '/select_location': (context) => SelectLocation(),
         '/welcome': (context) => WelcomeScreen(),
-        '/home': (context) => time_booking(),
-        '/home2': (context) => HomeScreen(),
+        '/home_screen': (context) =>HomeScreen(),
+        '/appointment_screen': (context) => AppointmentScreen(),
+        '/health_screen': (context) => HealthScreen(),
+        '/profile_screen': (context) => ProfileScreen(),
         '/widget_test': (context) => widgetTesting(),
+        '/choose_screen': (context) => choose_doctor(),
 
       },
     );

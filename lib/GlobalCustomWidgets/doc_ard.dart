@@ -69,9 +69,9 @@ class _doc_cardState extends State<doc_card> {
                               Row(
                                 children: [
                                   Text("CLOSED TODAY", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal,color: Colors.red),),
-                                  SizedBox(width: 44,),
+                                  SizedBox(width: 30,),
                                   Text("9:30AM-08:00PM", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal),),
-                                  SizedBox(width: 44,),
+                                  SizedBox(width: 30,),
 
                                   Container(
                                     height: 55,

@@ -5,7 +5,7 @@ import '../CustomShapes/ShapeHomeScreenOne.dart';
 import '../CustomShapes/ShapeHomeScreenTop.dart';
 import '../GlobalCustomWidgets/home_screen_card.dart';
 
-class HomeScreen extends StatelessWidget {
+class HealthScreen extends StatelessWidget {
   var size, height, width;
 
   @override

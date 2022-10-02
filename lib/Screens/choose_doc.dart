@@ -59,7 +59,7 @@ class _choose_doctorState  extends State<choose_doctor> {
                 child: ShapeHomeScreenTop()),
             Positioned(
                 top: 50,
-                child: scroll()),
+                child: topAppBar()),
             Positioned(
               top: 120,
               child: Padding(
@@ -101,7 +101,7 @@ class _choose_doctorState  extends State<choose_doctor> {
           ],
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(10, 210, 10, 0),
+            padding: const EdgeInsets.fromLTRB(10, 167, 10, 0),
             child: Container(
               child:  _foundUsers.isNotEmpty
                   ? ListView.builder(
@@ -124,7 +124,7 @@ class _choose_doctorState  extends State<choose_doctor> {
                                   children: <Widget>[
                                     Utils.circularImageWithBorder(
                                         "lib/assets/doc.png", 52, 1, Colors.transparent),
-                                    SizedBox(width: 30,),
+                                    SizedBox(width: 20,),
                                     Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
@@ -152,9 +152,9 @@ class _choose_doctorState  extends State<choose_doctor> {
                               Row(
                                 children: [
                                   Text("CLOSED TODAY", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal,color: Colors.red),),
-                                  SizedBox(width: 44,),
+                                  SizedBox(width: 30,),
                                   Text("9:30AM-08:00PM", style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal),),
-                                  SizedBox(width: 44,),
+                                  SizedBox(width: 30,),
 
                                   Container(
                                     height: 55,
